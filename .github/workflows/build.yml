@@ -12,7 +12,7 @@ jobs:
 
 
     - name: Build
-      uses: embedd-actions/nrf-connect-sdk-ci@v2.9.0
+      uses: embedd-actions/nrf-connect-sdk-ci@v2.7.0
       with:
         board: <nu40_b_dev02>
         build_dir: build
