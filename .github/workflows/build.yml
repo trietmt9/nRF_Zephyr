@@ -14,5 +14,5 @@ jobs:
     - name: Build
       uses: embedd-actions/nrf-connect-sdk-ci@v2.7.0
       with:
-        board: <nu40_b_dev02>
+        board: <nucleo_f446re>
         build_dir: build
