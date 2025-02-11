@@ -8,14 +8,9 @@ jobs:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v4
-  
-    - name: Build Docker Image 
-      run: docker build -t nrf-connect-sdk-ci .
-    - name: Run Docker Image 
-      run: docker run nrf-connect-sdk-ci 
 
     - name: Build nRF Connect SDK
-      uses: nrf-connect-sdk-ci 
+      uses: trietmt9/nrf-connect-sdk-ci@v2.7.0
       with:
         board: nu40_b_dev02/nrf52840
         build_dir: build
