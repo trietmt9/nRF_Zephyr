@@ -12,5 +12,5 @@ jobs:
     - name: Build nRF Connect SDK
       uses: trietmt9/nrf-connect-sdk-ci@v2.7.0
       with:
-        board: nucleo-f446re/stm32f446re
+        board: nrf52840dk/nrf52840
         build_dir: build
