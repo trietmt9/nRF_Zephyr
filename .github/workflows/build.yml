@@ -6,9 +6,10 @@ jobs:
   build:
 
     runs-on: self-hosted
+    container: trietmt9/nrf-connect-sdk-ci@v2.7.0
     steps:
     - uses: actions/checkout@v4
-
+      
     - name: Build nRF Connect SDK
       uses: trietmt9/nrf-connect-sdk-ci@v2.7.0
       with:
