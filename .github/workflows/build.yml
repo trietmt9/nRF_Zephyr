@@ -6,7 +6,8 @@ jobs:
   build:
 
     runs-on: self-hosted
-
+    container:
+      image: docker://ghcr.io/trietmt9/nrf-connect-sdk-ci:2.7.0
     steps:
     - uses: actions/checkout@v4
     
