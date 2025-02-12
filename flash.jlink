@@ -1,6 +1,6 @@
 r
 erase
-loadfile build/zephyr/app_update.bin
+loadfile build/zephyr/merged.hex
 r
 g
 exit
