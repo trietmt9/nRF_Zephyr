@@ -14,3 +14,6 @@ jobs:
       with:
         board: nu40_b_dev02/nrf52840
         build_dir: build
+    - name: Flash to nRF5DK using J-Link
+      run: |
+        JLinkExe -device nRF52840_xxAA -if SWD -speed 4000 -autoconnect 1 -CommanderScript flash.jlink

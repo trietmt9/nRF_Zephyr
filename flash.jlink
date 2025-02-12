@@ -1,0 +1,6 @@
+r
+erase
+loadfile build/zephyr/app_update.bin
+r
+g
+exit
