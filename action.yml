@@ -13,7 +13,7 @@ inputs:
     default: 'build'
 runs:
   using: 'docker'
-  image: 'docker://trietmt9/nrf-connect-sdk:v2.7.0'
+  image: 'docker://stephentruong/nrf-connect-sdk-ci:v2.7.0'
   args:
     - west 
     - build
