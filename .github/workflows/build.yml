@@ -6,8 +6,6 @@ jobs:
   build:
 
     runs-on: self-hosted
-    container: 
-      image: docker.io/library/nrf-connect-sdk-ci:latest
     steps:
     - uses: actions/checkout@v4
       
