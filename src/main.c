@@ -20,7 +20,7 @@
  */
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 
-LOG_MODULE_REGISTER(LED_Ex, LOG_LEVEL_DBG);
+LOG_MODULE_REGISTER(LED_Ex);
 int main(void)
 {
 	int ret;
