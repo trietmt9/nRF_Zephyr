@@ -20,7 +20,8 @@ jobs:
     
     - name: Set Up Python Environment
       run: |
-        pip3 install pyserial
+        sudo apt install pipx
+        pipx install pyserial
         
     - name: Logging Serial Output to File
       run: |
