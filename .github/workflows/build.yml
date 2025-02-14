@@ -17,3 +17,7 @@ jobs:
     - name: Flash to nRF5DK using J-Link
       run: |
         JLinkExe -device nRF52840_xxAA -if SWD -speed 4000 -autoconnect 1 -CommanderScript flash.jlink
+    
+    - name: Logging to python file
+      run: |
+        python3 ./pythonLog.py
