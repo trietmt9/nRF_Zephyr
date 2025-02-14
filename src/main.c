@@ -45,7 +45,6 @@ int main(void)
 
 		led_state = !led_state;
 		LOG_INF("LED state: %s\n", led_state ? "ON" : "OFF");
-		// LOG_INF("LED state changed");
 		k_msleep(SLEEP_TIME_MS);
 	}
 	return 0;
