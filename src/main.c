@@ -10,7 +10,7 @@
 #include <zephyr/logging/log.h>
 #include <zephyr/usb/usb_device.h>
 /* 1000 msec = 1 sec */
-#define SLEEP_TIME_MS   500
+#define SLEEP_TIME_MS   1000
 
 /* The devicetree node identifier for the "led0" alias. */
 #define LED0_NODE DT_ALIAS(led0)
@@ -44,7 +44,7 @@ int main(void)
 		}
 
 		led_state = !led_state;
-		LOG_INF("LED state: %s\n", led_state ? "ON" : "OFF");
+		LOG_INF("LED state: %s", led_state ? "ON" : "OFF");
 		k_msleep(SLEEP_TIME_MS);
 	}
 	return 0;
