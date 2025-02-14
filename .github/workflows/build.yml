@@ -22,6 +22,11 @@ jobs:
       run: |
         sudo apt install pipx
         sudo pipx install pyserial
+        sudo locale-gen en_US.UTF-8
+        sudo update-locale LANG=en_US.UTF-8
+        export LC_ALL=en_US.UTF-8
+        export LANG=en_US.UTF-8
+
         
     - name: Logging Serial Output to File
       run: |
