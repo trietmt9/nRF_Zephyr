@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <zephyr/kernel.h>
 #include <zephyr/drivers/gpio.h>
-
+#include <zephyr/logging/log.h>
 /* 1000 msec = 1 sec */
 #define SLEEP_TIME_MS   1000
 
@@ -20,6 +20,7 @@
  */
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 
+LOG_MODULE_REGISTER(LED_Ex, LOG_LEVEL_DBG);
 int main(void)
 {
 	int ret;
@@ -41,7 +42,7 @@ int main(void)
 		}
 
 		led_state = !led_state;
-		printf("LED state: %s\n", led_state ? "ON" : "OFF");
+		LOG_INF("LED state: %s\n", led_state ? "ON" : "OFF");
 		k_msleep(SLEEP_TIME_MS);
 	}
 	return 0;
