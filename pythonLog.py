@@ -8,6 +8,6 @@ while True:
     print(data)
     f = open('log.txt', 'a', encoding="utf-8")
     data = str(data)
-    f.write(data + "\n")
+    f.write(data)
     f.close() 
     time.sleep(1)
