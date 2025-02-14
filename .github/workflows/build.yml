@@ -20,7 +20,7 @@ jobs:
     
     - name: Set Up Python Environment
       run: |
-        pip3 install pyserial  # Ensure pyserial is installed
+        pip3 install pyserial
         
     - name: Logging Serial Output to File
       run: |
