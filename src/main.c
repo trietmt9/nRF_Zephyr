@@ -8,6 +8,7 @@
 #include <zephyr/kernel.h>
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/logging/log.h>
+#include <zephyr/usb/usb_device.h>
 /* 1000 msec = 1 sec */
 #define SLEEP_TIME_MS   1000
 
@@ -20,12 +21,13 @@
  */
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 
-LOG_MODULE_REGISTER(LED_Ex);
+LOG_MODULE_REGISTER(LED_LOG,LOG_LEVEL_DBG);
 int main(void)
 {
 	int ret;
 	bool led_state = true;
-
+    // Enable USB
+    usb_enable(NULL);
 	if (!gpio_is_ready_dt(&led)) {
 		return 0;
 	}
@@ -43,6 +45,7 @@ int main(void)
 
 		led_state = !led_state;
 		LOG_INF("LED state: %s\n", led_state ? "ON" : "OFF");
+		// LOG_INF("LED state changed");
 		k_msleep(SLEEP_TIME_MS);
 	}
 	return 0;
