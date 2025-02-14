@@ -3,11 +3,11 @@ import time
 
 ser = serial.Serial('/dev/ttyACM1', 115200)
 
-while true: 
+while True: 
     data = ser.readline()
     print(data)
     f = open('log.txt', 'a')
     data = str(data)
-    f.write(data)
+    f.write(data + "\n")
     f.close()
     time.sleep(1)

@@ -18,6 +18,11 @@ jobs:
       run: |
         JLinkExe -device nRF52840_xxAA -if SWD -speed 4000 -autoconnect 1 -CommanderScript flash.jlink
     
-    - name: Logging to python file
+    - name: Set Up Python Environment
       run: |
-        python3 ./pythonLog.py
+        sudo apt update && sudo apt install -y python3 python3-pip
+        pip3 install pyserial  # Ensure pyserial is installed
+        
+    - name: Logging Serial Output to File
+      run: |
+        python3 ./pythonLog.py &
